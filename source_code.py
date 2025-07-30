@@ -382,7 +382,7 @@ combined = combined.sort_values("Date")
 # --- Calculate cumulative EV count ---
 combined['Cumulative EVs'] = combined['Electric Vehicle (EV) Total'].cumsum()
 
-# --- Plot cumulative EV adoption ---
+# --- Plot cumulative EV adoption ----
 plt.figure(figsize=(12, 6))
 for source, group in combined.groupby('Source'):
     plt.plot(group['Date'], group['Cumulative EVs'], label=f'{source} (Cumulative)',
